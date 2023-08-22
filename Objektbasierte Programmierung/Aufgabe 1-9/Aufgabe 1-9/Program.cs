@@ -25,7 +25,7 @@ namespace Aufgabe_Funktionen
             Console.WriteLine("danke");
             return i;
         }
-        public static void ShowResult(string[] args)
+        static void ShowResult(string[] args)
         {
             Console.WriteLine($"ggT von: {a} und {b} ist: {z}");
         }
