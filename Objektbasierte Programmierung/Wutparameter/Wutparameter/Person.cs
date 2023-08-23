@@ -31,17 +31,20 @@ namespace Wutparameter
         {
             Console.WriteLine($"Ich raste aus!! \n Mein Wutlevel ist auf {wutLevel} von 10");
         }
-        public string EssenGeben(string eg)
+        public string EssenGeben(string a)
         {
             
 
-            if (eg == "yes")
+            if (a == "yes")
             {
                 wutLevel = 0;
                 appetitLevel = 0;
                 Console.WriteLine($"Ich habe mich beruhigt \n Mein Wutlevel ist auf {wutLevel} von 10");
             }
-            else { }
+            else 
+            {
+                Console.WriteLine("Ich brauche Essen!!!!");
+            }
             
         }
         /*public void EssenVerweigern()
