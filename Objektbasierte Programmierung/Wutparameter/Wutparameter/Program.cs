@@ -3,12 +3,12 @@
     internal class Program
     {
 
-        static void Main(string[] args, bool)
+        static void Main(string[] args)
         {
             Console.WriteLine("Wilkommen beim Wutparameter: ");
 
             int p = ReadIntP();
-            string eg = ReadIntEG();
+            string eg = ReadStringEG();
             //int ev = ReadIntEV();
             int a = ReadIntA();
             Person person = new Person();
@@ -29,17 +29,14 @@
             Console.WriteLine("danke");
             return p;
         }
-        public static string ReadIntEG()
+        public static string ReadStringEG()
         {
-            string eg;
-            do
-            {
-                Console.Write("Sind Sie satt?");
-                string two = Console.ReadLine();
-                two = two.ToLower();
-                
-            }
-            while (two == "yes", "no");
+            
+            Console.Write("Sind Sie satt? Yes/No: ");
+            string two = Console.ReadLine();
+            string twoa = two.ToLower();
+            return twoa;
+
         }
         /*public static int ReadIntEV()
         {
