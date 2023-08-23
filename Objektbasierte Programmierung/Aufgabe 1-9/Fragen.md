@@ -10,4 +10,4 @@
 	5. Was sind typische Anwendungsfaelle fuer Felder in C#?
     Wenn eine Funktion in meheren Methoden verwendet wird und zum speichern von Daten
     6. Was sind typische Anwendungsfaelle fuer Eigenschaften in C#?
-    zum validieren und setzen von werten
+    zum validieren und setzen von werten.
