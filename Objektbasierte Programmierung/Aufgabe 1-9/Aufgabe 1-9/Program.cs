@@ -11,6 +11,7 @@ namespace Aufgabe_Funktionen
         {
             int stop = 0;
             int stopesc = 1;
+            ///<param name="a"
 
             while (stop == 0)
             {

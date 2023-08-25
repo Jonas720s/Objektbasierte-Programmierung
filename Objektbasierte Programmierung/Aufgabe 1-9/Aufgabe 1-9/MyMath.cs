@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aufgabe_1_9
 {
-    internal class MyMath
+    public class MyMath
     {
         public static int Calc_ggT(int a, int b)
         {
