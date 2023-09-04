@@ -18,7 +18,6 @@ namespace Aufgabe_1_9.Tests
             int ggT2 = MyMath.Calc_ggT(25, 50);
             int ggt3 = MyMath.Calc_ggT(12, 4);
 
-
             Assert.AreEqual(1, ggT1);
             Assert.AreEqual(25, ggT2);
             Assert.AreEqual(4, ggt3);
