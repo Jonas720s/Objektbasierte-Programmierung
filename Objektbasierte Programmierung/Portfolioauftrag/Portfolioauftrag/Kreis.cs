@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portfolioauftrag
 {
-    internal class Kreis
+    public class Kreis
     {
         private Linie linie;
          

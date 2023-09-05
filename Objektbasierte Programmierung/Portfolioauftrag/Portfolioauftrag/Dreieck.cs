@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portfolioauftrag
 {
-    internal class Dreieck
+    public class Dreieck
     {
         private Linie linie1;
         private Linie linie2;

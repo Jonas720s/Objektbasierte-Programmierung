@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portfolioauftrag
 {
-    internal class Linie
+    public class Linie
     {
         private double laenge;
         public double Laenge { get { return laenge; } }
