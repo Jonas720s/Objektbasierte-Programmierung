@@ -22,7 +22,7 @@ namespace Portfolioauftrag
         public double BerechneFlaeche()
         {
             double flaeche = 0;
-            double radius = linie.Laenge / (2 * Math.PI);
+            double radius = BerechneUmfang() / (2 * Math.PI);
             flaeche = Math.Pow(radius, 2) * Math.PI;
             return flaeche;
         }
