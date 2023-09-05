@@ -8,20 +8,21 @@ namespace Portfolioauftrag
 {
     internal class Kreis
     {
-        Linie umfang;
-        public Kreis(Linie umfang) {
-            this.umfang = umfang;
+        private Linie linie;
+         
+        public Kreis(Linie Linie) {
+            this.linie = Linie;
             
         
         }
         public double BerechneUmfang()
         {
-            return umfang.Laenge;
+            return linie.Laenge;
         }
         public double BerechneFlaeche()
         {
             double flaeche = 0;
-            double radius = umfang.Laenge / (2 * Math.PI);
+            double radius = linie.Laenge / (2 * Math.PI);
             flaeche = Math.Pow(radius, 2) * Math.PI;
             return flaeche;
         }
