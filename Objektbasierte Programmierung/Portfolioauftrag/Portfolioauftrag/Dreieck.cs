@@ -14,9 +14,16 @@ namespace Portfolioauftrag
 
         public Dreieck(Linie Linie1, Linie Linie2, Linie Linie3)
         {
+        
             this.linie1 = Linie1;
             this.linie2 = Linie2;
             this.linie3 = Linie3;
+
+        }
+
+        public bool IstDreieckMoeglich()
+        {
+            return (linie1.Laenge + linie2.Laenge > linie3.Laenge) && (linie1.Laenge + linie3.Laenge > linie2.Laenge) && (linie2.Laenge + linie3.Laenge > linie1.Laenge);
         }
         public double BerechneUmfang()
         {
@@ -26,7 +33,8 @@ namespace Portfolioauftrag
         public double BerechneFlaeche()
         {
             double halbumfang = BerechneUmfang() / 2;
-            double flaeche = Math.Sqrt(halbumfang * (halbumfang - linie1.Laenge) * (halbumfang - linie2.Laenge) * (halbumfang - linie3.Laenge));
+            double v = Math.Sqrt(halbumfang * (halbumfang - linie1.Laenge) * (halbumfang - linie2.Laenge) * (halbumfang - linie3.Laenge));
+            double flaeche = v;
             return flaeche;
         }
     }
