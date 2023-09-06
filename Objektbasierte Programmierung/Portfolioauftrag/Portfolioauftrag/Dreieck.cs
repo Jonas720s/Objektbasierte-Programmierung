@@ -20,16 +20,27 @@ namespace Portfolioauftrag
             this.linie3 = Linie3;
 
         }
-
+        /// <summary>
+        /// Ermittelt ob mit den eingegebenen Werten ein Dreieck erstellt werden kann
+        /// </summary>
+        /// <returns>boolean</returns>
         public bool IstDreieckMoeglich()
         {
             return (linie1.Laenge + linie2.Laenge > linie3.Laenge) && (linie1.Laenge + linie3.Laenge > linie2.Laenge) && (linie2.Laenge + linie3.Laenge > linie1.Laenge);
         }
+        /// <summary>
+        /// Berechnet Umfang des Dreiecks anhand drei double
+        /// </summary>
+        /// <returns>Umfang des Dreiecks</returns>
         public double BerechneUmfang()
         {
             double umfang = linie1.Laenge + linie2.Laenge + linie3.Laenge;
             return umfang;
         }
+        /// <summary>
+        /// Berechne Fläche des Dreiecks
+        /// </summary>
+        /// <returns>Fläche des Dreiecks</returns>
         public double BerechneFlaeche()
         {
             double halbumfang = BerechneUmfang() / 2;

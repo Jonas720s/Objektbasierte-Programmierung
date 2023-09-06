@@ -12,13 +12,19 @@ namespace Portfolioauftrag
          
         public Kreis(Linie Linie) {
             this.linie = Linie;
-            
-        
         }
+        /// <summary>
+        /// Berechnet Umfang des Kreises anhand eines double
+        /// </summary>
+        /// <returns>Umfang des Kreises</returns>
         public double BerechneUmfang()
         {
             return linie.Laenge;
         }
+        /// <summary>
+        /// Berechnet Fläche des Kreises anhand des Kreisumfang
+        /// </summary>
+        /// <returns>Fläche des Kreises</returns>
         public double BerechneFlaeche()
         {
             double flaeche = 0;
