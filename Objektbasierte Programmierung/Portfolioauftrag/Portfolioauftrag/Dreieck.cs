@@ -12,12 +12,14 @@ namespace Portfolioauftrag
         private Linie linie2;
         private Linie linie3;
 
+
         public Dreieck(Linie Linie1, Linie Linie2, Linie Linie3)
         {
         
             this.linie1 = Linie1;
             this.linie2 = Linie2;
             this.linie3 = Linie3;
+
 
         }
         /// <summary>
