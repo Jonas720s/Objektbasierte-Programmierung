@@ -18,7 +18,8 @@ namespace Portfolioauftrag
             }
             else
             {
-                Console.WriteLine("Bitte eine Zahl grösser 0 eingeben: ");
+                Console.Write("Bitte eine Zahl grösser 0 eingeben: ");
+                this.laenge = Convert.ToDouble(Console.ReadLine());
             }
         }
 
