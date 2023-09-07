@@ -26,19 +26,16 @@ namespace Portfolioauftrag
         public string[] DreiecksBehaelter()
         {
             formBehälter[besetzt] = $"Dreieck {besetzt + 1}: {linie1.Laenge}, {linie2.Laenge}, {linie3.Laenge}";
-            Console.WriteLine($"Das ist der array {formBehälter[0]}, {formBehälter[1]}");
             return formBehälter;
         }
         public string[] RechtecksBehaelter()
         {
             formBehälter[besetzt] = $"Rechteck {besetzt + 1}: {linie1.Laenge}, {linie2.Laenge}";
-            Console.WriteLine($"Das ist der array {formBehälter[0]}, {formBehälter[1]}");
             return formBehälter;
         }
         public string[] KreisBehaelter()
         {
             formBehälter[besetzt] = $"Kreis {besetzt + 1}: {linie1.Laenge}";
-            Console.WriteLine($"Das ist der array {formBehälter[0]}, {formBehälter[1]}");
             return formBehälter;
         }
     }
