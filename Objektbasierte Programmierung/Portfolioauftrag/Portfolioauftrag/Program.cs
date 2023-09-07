@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wilkommen beim GeoShapes!");
+            Console.WriteLine("Wilkommen bei GeoShapes!");
             bool formkonstruktor = true;
             int dreieckBesetzt = 0;
             string[] dreiecksbehaelter = new string[4];
