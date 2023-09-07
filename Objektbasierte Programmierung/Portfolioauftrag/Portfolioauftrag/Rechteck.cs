@@ -35,7 +35,7 @@ namespace Portfolioauftrag
         /// <returns>Fläche des Rechtecks</returns>
         public double BerechneFlaeche()
         {
-            double flaeche = linie1.Laenge * linie2.Laenge;
+            double flaeche = linie1.Laenge * linie3.Laenge;
             return flaeche;
         }
     }
