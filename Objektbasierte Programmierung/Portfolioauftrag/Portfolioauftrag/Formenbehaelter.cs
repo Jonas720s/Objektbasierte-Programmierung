@@ -8,36 +8,34 @@ namespace Portfolioauftrag
 {
     internal class Formenbehaelter
     {
-        private Linie linie1;
-        private Linie linie2;
-        private Linie linie3;
-        private Linie linie4;
+        private Kreis kreis;
+        private Dreieck dreieck;
+        private Rechteck rechteck;
         private string[] formBehälter;
         private int besetzt;
 
-        public Formenbehaelter(int Besetzt, string[] FormBehälter, Linie Linie1, Linie Linie2, Linie Linie3, Linie Linie4) 
+        public Formenbehaelter(int Besetzt, string[] FormBehälter, Kreis Kreis, Dreieck Dreieck, Rechteck Rechteck) 
         {
             this.besetzt = Besetzt;
             this.formBehälter = FormBehälter;
-            this.linie1 = Linie1;
-            this.linie2 = Linie2;
-            this.linie3 = Linie3;
-            this.linie4 = Linie4;
+            this.kreis = Kreis;
+            this.dreieck = Dreieck;
+            this.rechteck = Rechteck;
         }
         
         public string[] DreiecksBehaelter()
         {
-            formBehälter[besetzt] = $"Dreieck {besetzt + 1}: {linie1.Laenge}, {linie2.Laenge}, {linie3.Laenge}";
+            formBehälter[besetzt] = $"Dreieck {besetzt + 1}: Umfang: {dreieck.BerechneUmfang()}, Fläche: {dreieck.BerechneFlaeche()}";
             return formBehälter;
         }
         public string[] RechtecksBehaelter()
         {
-            formBehälter[besetzt] = $"Rechteck {besetzt + 1}: {linie1.Laenge}, {linie2.Laenge}, {linie3.Laenge}, {linie4.Laenge}";
+            formBehälter[besetzt] = $"Rechteck {besetzt + 1}: Umfang: {rechteck.BerechneUmfang()}, Fläche: {rechteck.BerechneFlaeche()}";
             return formBehälter;
         }
         public string[] KreisBehaelter()
         {
-            formBehälter[besetzt] = $"Kreis {besetzt + 1}: {linie1.Laenge}";
+            formBehälter[besetzt] = $"Kreis {besetzt + 1}: Umfang: {kreis.BerechneUmfang()}, Fläche: {kreis.BerechneFlaeche()}";
             return formBehälter;
         }
     }

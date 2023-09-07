@@ -15,11 +15,13 @@
 
             //Zwie Kreise hinzufügen
             Linie kreislinie1 = new Linie(34);
-            Formenbehaelter tempKreisBehaelter1 = new Formenbehaelter(kreisBesetzt, kreisbehaelter, kreislinie1, null, null, null);
+            Kreis kreis1 = new Kreis(kreislinie1);
+            Formenbehaelter tempKreisBehaelter1 = new Formenbehaelter(kreisBesetzt, kreisbehaelter, kreis1, null, null);
             kreisBesetzt++;
             tempKreisBehaelter1.KreisBehaelter();
             Linie kreislinie2 = new Linie(55);
-            Formenbehaelter tempKreisBehaelter2 = new Formenbehaelter(kreisBesetzt, kreisbehaelter, kreislinie2, null, null, null);
+            Kreis kreis2 = new Kreis(kreislinie2);
+            Formenbehaelter tempKreisBehaelter2 = new Formenbehaelter(kreisBesetzt, kreisbehaelter, kreis2, null, null);
             kreisBesetzt++;
             tempKreisBehaelter2.KreisBehaelter();
 
@@ -27,7 +29,8 @@
             Linie dreiecksliniea1 = new Linie(14);
             Linie dreiecksliniea2 = new Linie(13);
             Linie dreiecksliniea3 = new Linie(12);
-            Formenbehaelter tempDreieckBehaeltera = new Formenbehaelter(dreieckBesetzt, dreiecksbehaelter, dreiecksliniea1, dreiecksliniea2, dreiecksliniea3, null);
+            Dreieck dreiecka = new Dreieck(dreiecksliniea1, dreiecksliniea2, dreiecksliniea3);
+            Formenbehaelter tempDreieckBehaeltera = new Formenbehaelter(dreieckBesetzt, dreiecksbehaelter, null, dreiecka, null);
             dreieckBesetzt++;
             tempDreieckBehaeltera.DreiecksBehaelter();
 
@@ -36,14 +39,16 @@
             Linie rechteckshöheb1 = new Linie(45);
             Linie rechtecksbreitea1 = new Linie(23);
             Linie rechtecksbreiteb1 = new Linie(23);
-            Formenbehaelter tempRechteckBehaelter1 = new Formenbehaelter(rechteckBesetzt, rechteckbehaelter, rechteckshöhea1, rechteckshöheb1, rechtecksbreitea1, rechtecksbreiteb1);
+            Rechteck rechteck1 = new Rechteck(rechteckshöhea1, rechteckshöheb1, rechtecksbreitea1, rechtecksbreiteb1);
+            Formenbehaelter tempRechteckBehaelter1 = new Formenbehaelter(rechteckBesetzt, rechteckbehaelter, null, null, rechteck1);
             rechteckBesetzt++;
             tempRechteckBehaelter1.RechtecksBehaelter();
             Linie rechteckshöhea2 = new Linie(56);
             Linie rechteckshöheb2 = new Linie(56);
             Linie rechtecksbreitea2 = new Linie(67);
             Linie rechtecksbreiteb2 = new Linie(67);
-            Formenbehaelter tempRechteckBehaelter2 = new Formenbehaelter(rechteckBesetzt, rechteckbehaelter, rechteckshöhea2, rechteckshöheb2, rechtecksbreitea2, rechtecksbreiteb2);
+            Rechteck rechteck2 = new Rechteck(rechteckshöhea2, rechteckshöheb2, rechtecksbreitea2, rechtecksbreiteb2);
+            Formenbehaelter tempRechteckBehaelter2 = new Formenbehaelter(rechteckBesetzt, rechteckbehaelter, null, null, rechteck2);
             rechteckBesetzt++;
             tempRechteckBehaelter2.RechtecksBehaelter();
 
@@ -91,7 +96,7 @@
                         Console.Write("Geben Sie die Länger der Linie für den Kreis ein: ");
                         Linie kreislinie = new Linie(Convert.ToDouble(Console.ReadLine()));
                         Kreis kreis = new Kreis(kreislinie);
-                        Formenbehaelter tempKreisBehaelter = new Formenbehaelter(kreisBesetzt, kreisbehaelter, kreislinie, null, null, null);
+                        Formenbehaelter tempKreisBehaelter = new Formenbehaelter(kreisBesetzt, kreisbehaelter, kreis, null, null);
                         kreisBesetzt++;
                         tempKreisBehaelter.KreisBehaelter();
                         Console.WriteLine($"Der Kreisumfang ist: {kreis.BerechneUmfang()}");
@@ -112,7 +117,7 @@
                         Console.Write("Geben Sie die Länge der Linien für das Dreieck ein: ");
                         Linie dreieckslinie3 = new Linie(Convert.ToDouble(Console.ReadLine()));
                         Dreieck dreieck = new Dreieck(dreieckslinie1, dreieckslinie2, dreieckslinie3);
-                        Formenbehaelter tempDreieckBehaelter = new Formenbehaelter(dreieckBesetzt, dreiecksbehaelter, dreieckslinie1, dreieckslinie2, dreieckslinie3, null);
+                        Formenbehaelter tempDreieckBehaelter = new Formenbehaelter(dreieckBesetzt, dreiecksbehaelter, null, dreieck, null);
                         dreieckBesetzt++;
                         tempDreieckBehaelter.DreiecksBehaelter();
                         if (dreieck.IstDreieckMoeglich())
@@ -141,7 +146,7 @@
                         Linie rechtecksbreitea = new Linie(Convert.ToDouble(Console.ReadLine()));
                         Linie rechtecksbreiteb = rechtecksbreitea;
                         Rechteck rechteck = new Rechteck(rechteckshöhea, rechteckshöheb, rechtecksbreitea, rechtecksbreiteb);
-                        Formenbehaelter tempRechteckBehaelter = new Formenbehaelter(rechteckBesetzt, rechteckbehaelter, rechteckshöhea, rechteckshöheb, rechtecksbreitea, rechtecksbreiteb);
+                        Formenbehaelter tempRechteckBehaelter = new Formenbehaelter(rechteckBesetzt, rechteckbehaelter, null, null, rechteck);
                         rechteckBesetzt++;
                         tempRechteckBehaelter.RechtecksBehaelter();
                         Console.WriteLine($" Der Umfang des Rechtecks beträgt: {rechteck.BerechneUmfang()}");
