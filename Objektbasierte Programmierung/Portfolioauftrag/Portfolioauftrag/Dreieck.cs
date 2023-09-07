@@ -33,7 +33,7 @@ namespace Portfolioauftrag
         /// <summary>
         /// Berechnet Umfang des Dreiecks anhand drei double
         /// </summary>
-        /// <returns>Umfang des Dreiecks</returns>
+        /// <returns>Umfang des Dreiecks: double</returns>
         public double BerechneUmfang()
         {
             double umfang = linie1.Laenge + linie2.Laenge + linie3.Laenge;
@@ -42,7 +42,7 @@ namespace Portfolioauftrag
         /// <summary>
         /// Berechne Fläche des Dreiecks
         /// </summary>
-        /// <returns>Fläche des Dreiecks</returns>
+        /// <returns>Fläche des Dreiecks: double</returns>
         public double BerechneFlaeche()
         {
             double halbumfang = BerechneUmfang() / 2;

@@ -21,9 +21,9 @@ namespace Portfolioauftrag
 
         }
         /// <summary>
-        /// Berechnet Umfang des Rechtecks anhand zwei double
+        /// Berechnet Umfang des Rechtecks anhand vier double
         /// </summary>
-        /// <returns>Umfang des Rechtecks</returns>
+        /// <returns>Umfang des Rechtecks: double</returns>
         public double BerechneUmfang()
         {
             double umfang = linie1.Laenge + linie2.Laenge + linie3.Laenge + linie4.Laenge;
@@ -32,7 +32,7 @@ namespace Portfolioauftrag
         /// <summary>
         /// Berechne Fläche des Rechtecks anhand zwei double
         /// </summary>
-        /// <returns>Fläche des Rechtecks</returns>
+        /// <returns>Fläche des Rechtecks: double</returns>
         public double BerechneFlaeche()
         {
             double flaeche = linie1.Laenge * linie3.Laenge;
