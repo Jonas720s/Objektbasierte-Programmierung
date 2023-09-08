@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Wilkommen bei GeoShapes!");
-            bool formkonstruktor = true;
+            bool geoshapes = true;
             int dreieckBesetzt = 0;
             string[] dreiecksbehaelter = new string[4];
             int kreisBesetzt = 0;
@@ -53,7 +53,7 @@
             tempRechteckBehaelter2.RechtecksBehaelter();
 
 
-            while (formkonstruktor == true)
+            while (geoshapes == true)
             {
                 Console.WriteLine("\nWelche Funktion möchten Sie aufrufen? \nF = Formenbehälter \nK = Kreis hinzufügen \nD = Dreieck hinzufügen \nR = Rechteck hinzufügen \nQ = um das Programm zu beenden");
                 string antwort = Console.ReadLine().ToUpper();
@@ -155,7 +155,7 @@
 
                     case "Q":
                         Console.WriteLine("Aufwiedersehen");
-                        formkonstruktor = false;
+                        geoshapes = false;
                         break;
 
                     default:
