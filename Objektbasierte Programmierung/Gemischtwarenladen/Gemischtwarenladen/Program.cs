@@ -10,7 +10,7 @@
             string[] produktListe = new string[100];
             double gesammtpreis = 0;
             bool produkteScannen = true;
-
+            Console.WriteLine("Test");
             while (programmEin == true)
             {
                 
@@ -19,7 +19,7 @@
                 {
                     Console.WriteLine("Bitte Scannen Sie ein Produkt");
                     Produkt produkt = new Produkt(Console.ReadLine());
-                    if (produkt.ProduktName() == "Q")
+                    if (produkt.ProduktName() == "Z")
                     {
                         produkteScannen = false;
                         break;
@@ -32,8 +32,35 @@
                     besetzt++;
 
                 }
-                
-                Bezahlen bezahlen = new Bezahlen(gesammtpreis);
+                while (gesammtpreis > 0)
+                {
+                    Bezahlen bezahlen = new Bezahlen(gesammtpreis);
+                    string zahlungsart = bezahlen.Zahlungsart();
+                    if (zahlungsart == "K")
+                    {
+                        gesammtpreis = bezahlen.KartenZahlung();
+                    }
+                    else if (zahlungsart == "T")
+                    {
+                        gesammtpreis = bezahlen.TwintZahlung();
+                    }
+                    else if (zahlungsart == "B")
+                    {
+                        gesammtpreis = bezahlen.BarZahlung();
+                    }
+                }
+                Console.WriteLine("\n\n\nVielen Dank für Ihren EInkauf\nFür neuen Kunden N\nProgramm beenden Q");
+                string antwort = Console.ReadLine();
+                if (antwort.ToUpper() == "N")
+                {
+                    break;
+                }
+                else if (antwort.ToUpper() == "Q")
+                {
+                    programmEin = false;
+                    break;
+                }
+
             }
             
         }

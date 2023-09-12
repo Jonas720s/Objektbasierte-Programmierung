@@ -44,9 +44,9 @@ namespace Gemischtwarenladen
                 typ = "Käse";
                 return typ;
             }
-            else if (produkt.ToUpper() == "Q")
+            else if (produkt.ToUpper() == "Z")
             {
-                typ = "Q";
+                typ = "Z";
                 return typ;
             }
             else
