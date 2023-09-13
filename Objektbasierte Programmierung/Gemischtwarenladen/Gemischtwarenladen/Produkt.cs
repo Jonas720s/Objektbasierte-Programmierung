@@ -23,42 +23,37 @@ namespace Gemischtwarenladen
         /// <returns>string Produktname</returns>
         public string ProduktName()
         {
-            if (produkt == "0014872221")
+            switch (produkt.ToUpper())
             {
-                typ = "Apfel\t";
-                return typ;
-            }
-            else if (produkt == "0014891598")
-            {
-                typ = "Brot\t";
-                return typ;
-            }
-            else if (produkt == "0014877158")
-            {
-                typ = "Mineral";
-                return typ;
-            }
-            else if (produkt == "0014870584")
-            {
-                typ = "Fleisch";
-                return typ;
-            }
-            else if (produkt == "0014884074")
-            {
-                typ = "Käse\t";
-                return typ;
-            }
-            else if (produkt.ToUpper() == "Z")
-            {
-                typ = "Z";
-                return typ;
-            }
-            else
-            {
+                case "0014872221":
+                    typ = "Apfel\t";
+                    break;
 
-                return "Nicht gefunden";
-            }
+                case "0014891598":
+                    typ = "Brot\t";
+                    break;
 
+                case "0014877158":
+                    typ = "Mineral";
+                    break;
+
+                case "0014870584":
+                    typ = "Fleisch";
+                    break;
+
+                case "0014884074":
+                    typ = "Käse\t";
+                    break;
+
+                case "Z":
+                    typ = "Z";
+                    break;
+
+                default:
+                    typ = "Nicht gefunden";
+                    break;
+            }
+            return typ;
         }
         /// <summary>
         /// Mit der gescannten Nummer wird der Preis gesucht
@@ -66,35 +61,33 @@ namespace Gemischtwarenladen
         /// <returns>double Produktpreis</returns>
         public double ProduktPreis()
         {
-            if (produkt == "0014872221")
+            switch (produkt)
             {
-                preis = 2;
-                return preis;
+                case "0014872221":
+                    preis = 2;
+                    break;
+
+                case "0014891598":
+                    preis = 3;
+                    break;
+
+                case "0014877158":
+                    preis = 1;
+                    break;
+
+                case "0014870584":
+                    preis = 12;
+                    break;
+
+                case "0014884074":
+                    preis = 5;
+                    break;
+
+                default:
+                    preis = 0;
+                    break;
             }
-            else if (produkt == "0014891598")
-            {
-                preis = 3;
-                return preis;
-            }
-            else if (produkt == "0014877158")
-            {
-                preis = 1;
-                return preis;
-            }
-            else if (produkt == "0014870584")
-            {
-                preis = 12;
-                return preis;
-            }
-            else if (produkt == "0014884074")
-            {
-                preis = 5;
-                return preis;
-            }
-            else
-            {
-                return 0;
-            }
+            return preis;
         }
     }
 }
