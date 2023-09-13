@@ -17,16 +17,20 @@ namespace Gemischtwarenladen
         {
             this.produkt = produkt;
         }
+        /// <summary>
+        /// mit der gescannten Nummer wird das Produkt gesucht
+        /// </summary>
+        /// <returns>string Produktname</returns>
         public string ProduktName()
         {
             if (produkt == "0014872221")
             {
-                typ = "Apfel";
+                typ = "Apfel\t";
                 return typ;
             }
             else if (produkt == "0014891598")
             {
-                typ = "Brot";
+                typ = "Brot\t";
                 return typ;
             }
             else if (produkt == "0014877158")
@@ -41,7 +45,7 @@ namespace Gemischtwarenladen
             }
             else if (produkt == "0014884074")
             {
-                typ = "Käse";
+                typ = "Käse\t";
                 return typ;
             }
             else if (produkt.ToUpper() == "Z")
@@ -56,6 +60,10 @@ namespace Gemischtwarenladen
             }
 
         }
+        /// <summary>
+        /// Mit der gescannten Nummer wird der Preis gesucht
+        /// </summary>
+        /// <returns>double Produktpreis</returns>
         public double ProduktPreis()
         {
             if (produkt == "0014872221")

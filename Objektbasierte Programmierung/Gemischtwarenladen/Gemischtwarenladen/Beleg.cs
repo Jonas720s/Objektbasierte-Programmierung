@@ -19,7 +19,10 @@ namespace Gemischtwarenladen
             this.preis = Preis;
             this.gesammtpreis = Gesammtpreis;
         }
-
+        /// <summary>
+        /// Produkt wird dem Beleg hinzugefügt
+        /// </summary>
+        /// <returns>string mit Produktname und Preis</returns>
         public string AddList()
         {
             string cpreis = string.Format("{0:C2}", preis);
@@ -27,6 +30,10 @@ namespace Gemischtwarenladen
             
             return produktList;
         }
+        /// <summary>
+        /// gesammtpreis wird aktualisiert
+        /// </summary>
+        /// <returns>double gesammtpreis</returns>
         public double SubTotal()
         {
             gesammtpreis = gesammtpreis + preis;

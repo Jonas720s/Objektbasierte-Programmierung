@@ -4,20 +4,20 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Willkommen im Gemischtwarenlade");
+            Console.WriteLine("Willkommen im Gemischtwarenladen");
             bool programmEin = true;
             int besetzt = 0;
             string[] produktListe = new string[100];
             double gesammtpreis = 0;
             bool produkteScannen = true;
-            Console.WriteLine("Test");
+
             while (programmEin == true)
             {
                 
 
                 while (produkteScannen == true)
                 {
-                    Console.WriteLine("Bitte Scannen Sie ein Produkt");
+                    Console.Write("Bitte Scannen Sie ein Produkt\t");
                     Produkt produkt = new Produkt(Console.ReadLine());
                     if (produkt.ProduktName() == "Z")
                     {

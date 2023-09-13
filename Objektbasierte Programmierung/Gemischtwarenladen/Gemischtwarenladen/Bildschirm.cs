@@ -18,6 +18,9 @@ namespace Gemischtwarenladen
             this.gesammtpreis = Gesammtpreis;
             this.besetzt = Besetzt;
         }
+        /// <summary>
+        /// Mit dem string Beleg und dem gesamtpreis wird eine Bildschirmausgabe erstellt
+        /// </summary>
         public void BelegAktualisieren()
         {
             for (int i = 0; i <= besetzt; i++)
