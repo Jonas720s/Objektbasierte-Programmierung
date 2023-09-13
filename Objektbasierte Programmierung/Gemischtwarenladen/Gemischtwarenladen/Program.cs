@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Willkommen im Gemischtwarenladen");
+            Console.WriteLine("Das Programm Gemischtwarenladen wurde gestartet\n\n");
             bool programmEin = true;
             int besetzt = 0;
             string[] produktListe = new string[100];
@@ -13,8 +13,8 @@
 
             while (programmEin == true)
             {
-                
 
+                Console.WriteLine("Willkommen im Gemischtwarenladen");
                 while (produkteScannen == true)
                 {
                     Console.Write("\nBitte Scannen Sie ein Produkt\t");
@@ -53,12 +53,15 @@
                 string antwort = Console.ReadLine();
                 if (antwort.ToUpper() == "N")
                 {
-                    break;
+                    Console.WriteLine("Sie können jetzt eine Neuen Kunden erfassen\n\n\n");
+                    besetzt = 0;
+                    produktListe = new string[100];
+                    gesammtpreis = 0;
+                    produkteScannen = true;
                 }
                 else if (antwort.ToUpper() == "Q")
                 {
                     programmEin = false;
-                    break;
                 }
 
             }
