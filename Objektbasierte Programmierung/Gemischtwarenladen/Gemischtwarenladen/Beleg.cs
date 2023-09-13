@@ -20,23 +20,32 @@ namespace Gemischtwarenladen
             this.gesammtpreis = Gesammtpreis;
         }
         /// <summary>
+        /// Wird als Produkt "Nicht gefunden" angegeben?
+        /// </summary>
+        /// <returns>bool</returns>
+        public bool ProduktVorhanden()
+        {
+            if (produkt == "Nicht gefunden")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        /// <summary>
         /// Produkt wird dem Beleg hinzugefügt
         /// </summary>
         /// <returns>string mit Produktname und Preis</returns>
         public string AddList()
         {
-            if (preis == 0)
-            {
-                return null;
-            }
-            else
-            {
-                string cpreis = string.Format("{0:C2}", preis);
-                produktList = $"Produkt: {produkt} \t\tkostet:\t\t {cpreis}";
 
-                return produktList;
-            }
-            
+            string cpreis = string.Format("{0:C2}", preis);
+            produktList = $"Produkt: {produkt} \t\tkostet:\t\t {cpreis}";
+
+            return produktList;
+
         }
         /// <summary>
         /// gesammtpreis wird aktualisiert

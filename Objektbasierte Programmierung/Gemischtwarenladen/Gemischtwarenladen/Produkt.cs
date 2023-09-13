@@ -56,7 +56,7 @@ namespace Gemischtwarenladen
             else
             {
 
-                return "\t\t";
+                return "Nicht gefunden";
             }
 
         }

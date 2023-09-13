@@ -25,7 +25,7 @@
                         break;
                     }
                     Beleg beleg = new Beleg(produkt.ProduktName(), produkt.ProduktPreis(), gesammtpreis);
-                    if (beleg.AddList() != null)
+                    if (beleg.ProduktVorhanden())
                     {
                         produktListe[besetzt] = beleg.AddList();
                         gesammtpreis = beleg.SubTotal();
