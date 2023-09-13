@@ -25,10 +25,18 @@ namespace Gemischtwarenladen
         /// <returns>string mit Produktname und Preis</returns>
         public string AddList()
         {
-            string cpreis = string.Format("{0:C2}", preis);
-            produktList = $"Produkt: {produkt} \t\tkostet:\t\t {cpreis}";
+            if (preis == 0)
+            {
+                return null;
+            }
+            else
+            {
+                string cpreis = string.Format("{0:C2}", preis);
+                produktList = $"Produkt: {produkt} \t\tkostet:\t\t {cpreis}";
+
+                return produktList;
+            }
             
-            return produktList;
         }
         /// <summary>
         /// gesammtpreis wird aktualisiert

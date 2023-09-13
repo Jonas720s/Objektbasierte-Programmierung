@@ -25,12 +25,18 @@
                         break;
                     }
                     Beleg beleg = new Beleg(produkt.ProduktName(), produkt.ProduktPreis(), gesammtpreis);
-                    produktListe[besetzt] = beleg.AddList();
-                    gesammtpreis = beleg.SubTotal();
-                    Bildschirm anzeige = new Bildschirm(produktListe, gesammtpreis, besetzt);
-                    anzeige.BelegAktualisieren();
-                    besetzt++;
-
+                    if (beleg.AddList() != null)
+                    {
+                        produktListe[besetzt] = beleg.AddList();
+                        gesammtpreis = beleg.SubTotal();
+                        Bildschirm anzeige = new Bildschirm(produktListe, gesammtpreis, besetzt);
+                        anzeige.BelegAktualisieren();
+                        besetzt++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Dieser Artikel wurde nicht gefunden!");
+                    }
                 }
                 while (gesammtpreis > 0)
                 {
