@@ -17,7 +17,7 @@
 
                 while (produkteScannen == true)
                 {
-                    Console.Write("Bitte Scannen Sie ein Produkt\t");
+                    Console.Write("\nBitte Scannen Sie ein Produkt\t");
                     Produkt produkt = new Produkt(Console.ReadLine());
                     if (produkt.ProduktName() == "Z")
                     {

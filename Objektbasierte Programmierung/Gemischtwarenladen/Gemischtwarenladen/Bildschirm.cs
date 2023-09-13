@@ -23,6 +23,7 @@ namespace Gemischtwarenladen
         /// </summary>
         public void BelegAktualisieren()
         {
+            Console.WriteLine("\n");
             for (int i = 0; i <= besetzt; i++)
             {
                 Console.WriteLine(produktListe[i]);
