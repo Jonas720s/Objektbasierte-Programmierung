@@ -27,10 +27,10 @@
                     Beleg beleg = new Beleg(produkt.ProduktName(), produkt.ProduktPreis(), gesammtpreis);
                     if (beleg.ProduktVorhanden())
                     {
-                        produktListe[besetzt] = beleg.AddList();
+                        produktListe[besetzt] = beleg.AddBeleg();
                         gesammtpreis = beleg.SubTotal();
                         Bildschirm anzeige = new Bildschirm(produktListe, gesammtpreis, besetzt);
-                        anzeige.BelegAktualisieren();
+                        anzeige.BelegAnzeigen();
                         besetzt++;
                     }
                     else

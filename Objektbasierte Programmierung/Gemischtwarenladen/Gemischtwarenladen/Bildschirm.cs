@@ -21,7 +21,7 @@ namespace Gemischtwarenladen
         /// <summary>
         /// Mit dem string Beleg und dem gesamtpreis wird eine Bildschirmausgabe erstellt
         /// </summary>
-        public void BelegAktualisieren()
+        public void BelegAnzeigen()
         {
             Console.WriteLine("\n");
             for (int i = 0; i <= besetzt; i++)

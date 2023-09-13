@@ -38,7 +38,7 @@ namespace Gemischtwarenladen
         /// Produkt wird dem Beleg hinzugefügt
         /// </summary>
         /// <returns>string mit Produktname und Preis</returns>
-        public string AddList()
+        public string AddBeleg()
         {
 
             string cpreis = string.Format("{0:C2}", preis);
